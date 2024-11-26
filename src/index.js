@@ -16,6 +16,7 @@ export default {
 					},
 				],
 			});
+			console.log("===========LOG STATEMENT FROM USER WORKER===========");
 			return new Response(response.choices[0].message.content);
 		} catch (error) {
 			console.error(error);

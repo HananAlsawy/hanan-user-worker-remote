@@ -2,7 +2,7 @@ import { OpenAI } from 'openai';
 
 export default {
 	async fetch(request, env, ctx) {
-		console.log("===========LOG STATEMENT FROM USER WORKER===========");
+		console.log("============LOG STATEMENT FROM USER WORKER===========");
 		return new Response("Hello from the user worker!");
 
 		// Call openai api

@@ -2,6 +2,8 @@ import { OpenAI } from 'openai';
 
 export default {
 	async fetch(request, env, ctx) {
+		console.log("===========LOG STATEMENT FROM USER WORKER===========");
+
 		// Call openai api
 		const openai = new OpenAI({
 			apiKey: env.OPENAI_API_KEY,
@@ -16,7 +18,6 @@ export default {
 					},
 				],
 			});
-			console.log("===========LOG STATEMENT FROM USER WORKER===========");
 			return new Response(response.choices[0].message.content);
 		} catch (error) {
 			console.error(error);
